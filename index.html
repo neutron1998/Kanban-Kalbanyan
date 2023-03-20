@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Borad</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwsome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="kanban">
+      <div class="container">
+        <h1>Kalbanyan Kanban</h1>
+        <div class="kanban-container">
+          <!-- Kanban Not Started -->
+          <div class="kanban-col">
+            <h2>Not Started</h2>
+            <!-- Kanban Tasks Container -->
+            <div class="kanban-tasks"></div>
+            <button class="btn-add" role="button">+ Add</button>
+          </div>
+          <!-- Kanban Inprogress -->
+          <div class="kanban-col">
+            <h2>In Progress</h2>
+            <div class="kanban-tasks"></div>
+            <button class="btn-add" role="button">+ Add</button>
+          </div>
+          <!-- Kanban Not Started -->
+          <div class="kanban-col">
+            <h2>Completed</h2>
+            <div class="kanban-tasks"></div>
+            <button class="btn-add" role="button">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

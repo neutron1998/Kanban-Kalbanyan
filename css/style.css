@@ -1,0 +1,149 @@
+/* Start General rules */
+:root{
+    /* Colors */
+    --red-color: #F7C8E0;
+    --white-color: #eee;
+    --l-white-color: rgb(248, 248, 248);
+    --black-color: #222;
+    --green-color: #DFFFD8;
+    --blue-color: #95BDFF;
+    --l-blue-color: #B4E4FF;
+    --d-blue-color: #3700bd;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--l-blue-color);
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--blue-color);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: var(--l-blue-color);  
+}
+/* container  */
+.container{
+    margin: 0 auto;
+}
+@media (min-width: 767px) {
+    .container{
+        width: 755px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        width: 982px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1189px;
+    }
+}
+
+/* End General rules */
+/* Start Kanban  */
+.kanban h1{
+    text-align: center;
+    margin: 3rem;
+    text-shadow: -1px 4px 0px #234;
+    font-size: 4rem;
+    color: #124cdacc;
+    margin-top: 0rem;
+    padding-top: 3rem;
+}
+.kanban .kanban-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    gap: .5rem;
+    padding: .5rem;
+}
+.kanban-col{
+}
+.kanban-col h2{
+    color: var(--d-blue-color);
+    text-transform: capitalize;
+    padding : .5rem 1rem;
+    text-shadow: 0px 0px 0px #23422322;
+    user-select: none;
+}
+.kanban-col .kanban-tasks{
+    /* background-color: var(--white-color); */
+    padding: 1rem .5rem;
+    border-radius: 5px;
+    border: 3px solid var(--blue-color);
+    max-height: 300px;
+    overflow:auto;
+}
+
+.btn-add{
+    border: none;
+    width: 100%;
+    padding : .5rem 1rem;
+    background-color: var(--blue-color);
+    margin-top: 1rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--d-blue-color);
+    font-weight: 600;
+}
+.btn-add:hover{
+    background-color: #00c3ff42;
+    color: var(--green-color)
+}
+
+.kanban-col .kanban-tasks .task {
+    background-color: var(--l-white-color);    
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 5px;
+    transition: .6s linear;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 0px #23422322;
+}   
+
+.kanban-col .kanban-tasks .task.active{
+    box-shadow: -3px 6px 0px 0px #23422322;
+}
+.kanban-col .kanban-tasks .task.complete{
+    background-color: #878787;
+}
+.task-content{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: .5rem .2rem;
+    background-color: transparent;
+    text-indent: .2rem;
+    font-size: 1.1rem;    
+}
+.task-controls{
+    padding-right: .5rem;
+    display: flex;
+    gap: .3rem;
+}
+.upd{
+    color: var(--d-blue-color);
+}
+.del{
+    color: tomato;
+}
+input:disabled{
+    user-select: none;
+}
+.dragging{
+    opacity: .5;
+}
+
+/* End Kanban */
